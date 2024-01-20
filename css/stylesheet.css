@@ -184,11 +184,11 @@ img {
     padding: 0;
     list-style: none;
     justify-content: flex-end;
-    column-gap: 10%;
+    column-gap: 7%;
   }
 
   .character-card {
-    width: 40%;
+    width: 26%;
     max-width: 450px;
   }
 }
