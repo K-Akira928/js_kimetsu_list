@@ -4,10 +4,12 @@ export class KimetsuApp {
 
   #characterListView = new CharacterListView();
 
-  #allCharacterApi = 'https://ihatov08.github.io/kimetsu_api/api/all.json';
-  #demonSlayersApi = 'https://ihatov08.github.io/kimetsu_api/api/kisatsutai.json';
-  #hashiraApi = 'https://ihatov08.github.io/kimetsu_api/api/hashira.json';
-  #demonApi = 'https://ihatov08.github.io/kimetsu_api/api/oni.json';
+  #BASE_API = 'https://ihatov08.github.io/kimetsu_api/api/'
+
+  #ALL_CHARACTER_API = this.#BASE_API + 'all.json';
+  #DEMON_SLAYERS_API = this.#BASE_API + 'kisatsutai.json';
+  #HASHIRA_API = this.#BASE_API + 'hashira.json';
+  #DEMON_API = this.#BASE_API +'oni.json';
 
   allCharacterRadioElement;
   demonSlayersRadioElement;
@@ -51,11 +53,11 @@ export class KimetsuApp {
   };
 
   mount() {
-    this.#handleCharacterDisplayEvent(this, this.#allCharacterApi);
-    this.#handleRadioButtonAddEvent('change', this.allCharacterRadioElement, this.#handleCharacterDisplayEvent, this.#allCharacterApi);
-    this.#handleRadioButtonAddEvent('change', this.demonSlayersRadioElement, this.#handleCharacterDisplayEvent, this.#demonSlayersApi);
-    this.#handleRadioButtonAddEvent('change', this.hashiraRadioElement, this.#handleCharacterDisplayEvent, this.#hashiraApi);
-    this.#handleRadioButtonAddEvent('change', this.demonRadioElement, this.#handleCharacterDisplayEvent, this.#demonApi);
+    this.#handleCharacterDisplayEvent(this, this.#ALL_CHARACTER_API);
+    this.#handleRadioButtonAddEvent('change', this.allCharacterRadioElement, this.#handleCharacterDisplayEvent, this.#ALL_CHARACTER_API);
+    this.#handleRadioButtonAddEvent('change', this.demonSlayersRadioElement, this.#handleCharacterDisplayEvent, this.#DEMON_SLAYERS_API);
+    this.#handleRadioButtonAddEvent('change', this.hashiraRadioElement, this.#handleCharacterDisplayEvent, this.#HASHIRA_API);
+    this.#handleRadioButtonAddEvent('change', this.demonRadioElement, this.#handleCharacterDisplayEvent, this.#DEMON_API);
   }
 
 }
