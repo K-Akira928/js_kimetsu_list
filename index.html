@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/stylesheet.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">鬼滅の刃 キャラ一覧</h1>
+  </header>
+  <div class="loader">
+    <span class="loading-text">NowLoading...</span>
+  </div>
+  <main>
+    <form>
+      <fieldset>
+        <legend>フィルター</legend>
+        <div class="character-radio-list">
+          <div>
+            <input type="radio" id="all-character-radio" name="filter" value="all-character" checked />
+            <label for="all-character-radio">全キャラクター</label>
+          </div>
+          <div>
+            <input type="radio" id="demon-slayers-radio" name="filter" value="demon-slayers" />
+            <label for="daemon-slayers-radio">鬼殺隊</label>
+          </div>
+          <div>
+            <input type="radio" id="hashira-radio" name="filter" value="hashira" />
+            <label for="hashira-radio">柱</label>
+          </div>
+          <div>
+            <input type="radio" id="demon-radio" name="filter" value="demon" />
+            <label for="daemon-radio">鬼</label>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <div class="character-container">
+    </div>
+    <script type="module" src="index.js"></script>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>
